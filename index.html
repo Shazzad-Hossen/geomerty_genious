@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genious</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="max-w-7xl  mx-auto mt-3">
+    <header>
+        <div class="flex  justify-between bg-sky-100 items-center p-4 rounded-lg mb-6">
+            <div>
+                <p class="text-3xl font-semibold">Interactive</p>
+                <p class="text-xl font-medium text-zinc-500">Geometry Genius</p>
+            </div>
+            <div class="btn bg-sky-400 border-0 px-8" onclick="blog()">Blog</div>
+        </div>
+    </header>
+    <main>
+        <div class="flex gap-10 items-center lg:items-start sm:justify-between flex-col lg:flex-row">
+
+            <div id=""
+                class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-4 items-center justify-center">
+
+                <div class="border-zinc-300 border rounded-md p-6 flex flex-col justify-center items-center gap-2 w-72 h-96"
+                    onmouseover="randBG(this)" onmouseout="normalBG(this)">
+                    <div class=" h-48 flex items-center"><img src="./images/triangle.png" alt="" width="170px"></div>
+                    <p class="text-2xl font-bold">Triangle</p>
+                    <p>Area (A) = 0.5 x b x h</p>
+                    <div class="flex justify-center items-center gap-2"> <input id="tri-b"
+                            class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7" type="text" placeholder="b"> cm
+                        <input id="tri-h" class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7 " type="text"
+                            placeholder="h"> cm</div>
+                    <div class="btn bg-sky-600 w-full border-0 mt-6" onclick="triangle();">Calculate</div>
+                </div>
+
+                <div class="border-zinc-300 border rounded-md p-6 flex flex-col justify-center items-center gap-2 w-72 h-96"
+                    onmouseover="randBG(this)" onmouseout="normalBG(this)">
+                    <div class=" h-48 flex items-center"><img src="./images/rectangle.png" alt="" width="170px"></div>
+                    <p class="text-2xl font-bold">Rectangle</p>
+                    <p>Area (A) = w x l</p>
+                    <div class="flex justify-center items-center gap-2"> <input id="rec-w"
+                            class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7" type="text" placeholder="w"> cm
+                        <input id="rec-l" class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7 " type="text"
+                            placeholder="l"> cm</div>
+                    <div class="btn bg-sky-600 w-full border-0 mt-6" onclick="rectangle()">Calculate</div>
+                </div>
+
+
+                <div class="border-zinc-300 border rounded-md p-6 flex flex-col justify-center items-center gap-2 w-72 h-96"
+                    onmouseover="randBG(this)" onmouseout="normalBG(this)">
+                    <div class=" h-48 flex items-center"><img src="./images/parallelogram.png" alt="" width="170px">
+                    </div>
+                    <p class="text-2xl font-bold">Parallelogram</p>
+                    <p>Area (A) = b x h</p>
+                    <div class="flex items-center">
+                        <p>b=10cm, h=12cm</p>
+                        <div class="btn bg-white border-0" onclick="enableEdit(3)"> <img id="e-3" 
+                                src="./images/icon/edit 2.png" alt="" width="20px"> </div>
+                    </div>
+
+                    <div id="ed3" class="flex justify-center items-center gap-2 invisible">
+                        <input id="i_31" class=" bg-slate-100 border-0 rounded-md w-16 px-4 h-7" type="text"
+                            placeholder="b">
+                        cm
+                        <input id="i_32"  class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7 " type="text"
+                            placeholder="h">
+                        cm
+                        <input id="chk3" class="w-6 h-6 rounded" type="checkbox" name="" id="">
+
+                    </div>
+                    <div class="btn bg-sky-600 w-full border-0 mt-6" onclick="Parallelogram()">Calculate</div>
+                </div>
+
+                <div class="border-zinc-300 border rounded-md p-6 flex flex-col justify-center items-center gap-2 w-72 h-96"
+                    onmouseover="randBG(this)" onmouseout="normalBG(this)">
+                    <div class=" h-48 flex items-center"><img src="./images/rhombus.png" alt="" width="120px"></div>
+                    <p class="text-2xl font-bold">Rhombus</p>
+                    <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                    <div class="flex items-center">
+                        <p>d<sub>1</sub>=16cm, d<sub>2</sub>=8cm</p>
+                        <div class="btn bg-white border-0" onclick="enableEdit(4)"> <img id="e-4" 
+                                src="./images/icon/edit 2.png" alt="" width="20px"> </div>
+                    </div>
+                    <div id="ed4" class="flex justify-center items-center gap-2 invisible"> <input id="i_41" 
+                            class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7" type="text" placeholder="d1"> cm
+                        <input id="i_42"  class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7 " type="text"
+                            placeholder="d2"> cm <input id="chk4" class="w-6 h-6 rounded" type="checkbox" name="" id="">
+                    </div>
+                    <div class="btn bg-sky-600 w-full border-0 mt-6" onclick="Rhombus()">Calculate</div>
+                </div>
+
+
+                <div class="border-zinc-300 border rounded-md p-6 flex flex-col justify-center items-center gap-1 w-72 h-96"
+                    onmouseover="randBG(this)" onmouseout="normalBG(this)">
+                    <div class=" h-48 flex items-center"><img src="./images/pentagon.png" alt="" width="100px"></div>
+                    <p class="text-2xl font-bold">Pentagon</p>
+                    <p>Area (A) = 0.5 x p x b</p>
+                    <div class="flex items-center">
+                        <p>p=6cm, b=10cm</p>
+                        <div class="btn bg-white border-0" onclick="enableEdit(5)"> <img id="e-5" 
+                                src="./images/icon/edit 2.png" alt="" width="20px"> </div>
+                    </div>
+                    <div id="ed5" class="flex justify-center items-center gap-2 invisible"> <input id="i_51" 
+                            class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7" type="text" placeholder="p"> cm
+                        <input id="i_52"  class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7 " type="text"
+                            placeholder="b"> cm <input id="chk5" class="w-6 h-6 rounded" type="checkbox" name="" id="">
+                    </div>
+                    <div class="btn bg-sky-600 w-full border-0 mt-6" onclick="Pentagon()">Calculate</div>
+                </div>
+
+                <div class="border-zinc-300 border rounded-md p-6 flex flex-col justify-center items-center gap-2 w-72 h-96"
+                    onmouseover="randBG(this)" onmouseout="normalBG(this)">
+                    <div class=" h-48 flex items-center"><img src="./images/ellipse.png" alt="" width="150px"></div>
+                    <p class="text-2xl font-bold">Ellipse</p>
+                    <p>Area (A) = π ab</p>
+                    <div class="flex items-center">
+                        <p>a=10cm, b=4cm</p>
+                        <div class="btn bg-white border-0" onclick="enableEdit(6)"> <img id="e-6" src="./images/icon/edit 2.png" alt="" width="20px"> </div>
+                    </div>
+                    <div id="ed6" class="flex justify-center items-center gap-2 invisible"> <input id="i_61" 
+                            class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7" type="text" placeholder="a"> cm
+                        <input id="i_62"  class="bg-slate-100 border-0 rounded-md w-16 px-4 h-7 " type="text"
+                            placeholder="b"> cm <input id="chk6" class="w-6 h-6 rounded" type="checkbox" name="" id="">
+                    </div>
+                    <div class="btn bg-sky-600 w-full border-0 mt-6" onclick="Ellipse()">Calculate</div>
+                </div>
+
+
+
+
+            </div>
+
+
+            <div>
+                <div class="border-zinc-300 border rounded-md p-6 w-80 
+        ">
+                    <p class="text-center font-bold"> <u>Area Calculation</u> </p>
+
+                    <ol id="output" style="list-style-type: decimal;">
+                        <br> <br>
+
+                    </ol>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>
